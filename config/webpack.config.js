@@ -11,10 +11,13 @@ module.exports = merge(
     // 入口
     entry: path.resolve(__dirname, "../src/index.jsx"),
     // 模块
+    resolve: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"] // 自动拾取后缀
+    },
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
+          test: /\.js|jsx$/,
           exclude: /node_modules/,
           use: {
             loader: "babel-loader",

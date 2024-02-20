@@ -10,6 +10,9 @@ module.exports = merge(
   {
     // 入口
     entry: path.resolve(__dirname, "../src/index.jsx"),
+    resolve: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"], // 自动拾取后缀
+    },
     // 模块
     module: {
       rules: [
@@ -29,6 +32,13 @@ module.exports = merge(
           use: ["style-loader", "css-loader"],
         },
       ],
+    },
+
+    devServer: {
+      static: {
+        directory: path.join(__dirname, "dist"), // 设置Dev Server的静态文件根目录
+      },
+      historyApiFallback: true, 
     },
     // 插件
     plugins: [

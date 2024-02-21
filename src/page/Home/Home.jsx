@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <h1 className="text-primary text-4xl font-bold">
+      Hello world! I am using React
+    </h1>
+  );
 }

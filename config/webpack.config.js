@@ -32,7 +32,7 @@ module.exports = merge(
         {
           // 用正则去匹配要用该 loader 转换的 CSS 文件
           test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          use: ['style-loader', 'css-loader', 'postcss-loader'],
         },
       ],
     },
